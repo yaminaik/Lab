@@ -1,0 +1,22 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+           <label for="title">Title</label>
+           <input type="text" name="title" id="title" class="form-control"
+           required [(ngModel)]="todo.title"/>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" class="form-control"
+          required [(ngModel)]="todo.description"/>
+       </div>
+       <button (click)="saveTodo()" class="btn btn-success">Submit</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Tutorial was saved successfully!</h4>
+        <button class="btn btn-success" (click)="newTodo()">Add</button>
+      </div>
+    </div>
+  </div>
+  
