@@ -1,0 +1,68 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Individual Elements Styling */
+header, footer {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+aside {
+    background-color: #aaa;
+    padding: 10px;
+    text-align: center;
+}
+
+article {
+    background-color: #eee;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Mobile First */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Desktop Layout */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header {
+        flex: 1 100%;
+    }
+
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    article {
+        flex: 3;
+    }
+
+    aside {
+        flex: 1;
+    }
+
+    footer {
+        flex: 1 100%;
+    }
+}
